@@ -1,0 +1,132 @@
+/* IMPORTS
+======================= */
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Poppins:wght@400;700&display=swap");
+/* COLORS VARIABLES  
+======================= */
+/* FONT-FAMILY
+======================= */
+/* CLASSES 
+======================= */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 80px;
+  z-index: 1000;
+}
+@media screen and (min-width: 768px) {
+  nav .mobile-menu {
+    display: none;
+  }
+}
+nav .mobile-menu .container {
+  width: 100%;
+  height: 80px;
+  transition: all 0.2s ease-in-out;
+  background: #f2f2f2;
+  align-items: center;
+  justify-content: space-between;
+}
+nav .mobile-menu .container .logo {
+  font-size: 1.2rem;
+  margin-left: 25px;
+  transition: all 0.25s ease-out;
+  z-index: 10;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+nav .mobile-menu .mobile-navigation {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  transition: all 0.2s ease-in-out;
+  background: #f2f2f2;
+}
+nav .mobile-menu .mobile-navigation ul {
+  list-style: none;
+  justify-content: space-evenly;
+  width: 100%;
+}
+nav .mobile-menu .mobile-navigation ul li {
+  text-align: center;
+}
+nav .mobile-menu .mobile-navigation ul li a {
+  padding: 5px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  color: #333;
+}
+nav .desktop-menu {
+  width: 100vw;
+  height: 80px;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: grid;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+}
+nav .desktop-menu:hover {
+  background: #f2f2f2;
+}
+@media screen and (max-width: 768px) {
+  nav .desktop-menu {
+    display: none;
+  }
+}
+nav .desktop-menu .container {
+  height: 100%;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+}
+nav .desktop-menu .container .logo {
+  font-size: 1.5rem;
+  margin-left: 25px;
+  transition: all 0.25s ease-out;
+  z-index: 10;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+nav .desktop-menu .desktop-navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  transition: all 0.2s ease-in-out;
+}
+nav .desktop-menu .desktop-navigation ul {
+  list-style: none;
+  justify-content: center;
+}
+nav .desktop-menu .desktop-navigation ul li {
+  text-align: center;
+}
+nav .desktop-menu .desktop-navigation ul li a {
+  padding: 15px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  color: #333;
+}
+nav .dark-mode-cta {
+  width: 40px;
+  height: 40px;
+  margin-right: 25px;
+  z-index: 9999;
+}
+
+/*# sourceMappingURL=nav.css.map */

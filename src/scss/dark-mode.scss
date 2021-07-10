@@ -1,0 +1,82 @@
+/* IMPORTS
+======================= */
+
+@use './mixins/colors' as c;
+
+.dark-mode {
+    background: c.$blanc;
+    filter: invert(1) hue-rotate(180deg);
+}
+
+#nav > * .dark-mode-navigation {
+    background: c.$noir;
+    color: c.$blanc;
+
+    a { color: c.$blanc; }
+}
+
+#cursor  {
+    & > .dark-mode-cursor {
+        background: c.$blanc;
+        color: c.$blanc;
+        &.cursor-circle {
+            background: transparent;
+            border: 1px solid c.$blanc;
+        }
+    }
+}
+
+#hero.dark-mode-section {
+    background: c.$gris;
+    transition: all .2s ease-in-out;
+    .wave {
+        @for $i from 1 through 4 {
+            &:nth-child(#{$i}) {
+                animation: waves (#{$i} + 7s) linear infinite;
+                background: rgba(51, 51, 51, calc(#{$i}/4));
+            }
+        }
+    }
+    .wave-text {
+        h2, p {
+            color: c.$blanc;
+        }
+        
+    }
+}
+
+#work.dark-mode-section {
+    background: c.$noir;
+    & > * {
+        background: c.$noir;
+    }
+    h1 {
+        color: c.$blanc;
+    }
+
+    .livetest-grid {
+
+        background: c.$gris !important;
+    
+        .card {
+            background: c.$noir !important;
+            &::after {
+                background:c.$noir !important;
+            }
+
+            &:nth-child(2n) {
+                background: c.$gris !important;
+                &::after {
+                    background:c.$gris !important;
+                }
+            }
+        }
+        &:nth-child(2n) {
+            background: c.$gris;
+        }
+    }
+}
+
+#contact.dark-mode-section {
+    background: c.$noir;
+}

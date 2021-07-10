@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dist/css/main.css">
+    <link rel="stylesheet" href="dist/css/cursor.css">
+    <link rel="stylesheet" href="dist/css/dark-mode.css">
+    <link rel="stylesheet" href="dist/css/nav.css">
+
+    <title>Alexis TAN - Développeur web front</title>
+</head>
+<body>
+    <nav id="nav">
+        <div class="mobile-menu">
+            <div class="container is-flex">
+                <a href="#" class="logo">Alexis TAN</a>
+                <img src="src/assets/moon.svg" class="dark-mode-cta"/>
+            </div>
+
+            <div class="mobile-navigation is-flex">
+                <ul class="is-flex">
+                    <li> <a href="#">Mes travaux  </a> </li>
+                    <li> <span> | </span> </li>
+                    <li> <a href="#">Mon parcours </a> </li>
+                    <li> <span> | </span> </li>
+                    <li> <a href="#">Me contacter </a> </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="desktop-menu">
+            <div class="container is-flex">
+                <a href="#" class="logo">Alexis TAN</a>
+                <img src="src/assets/moon.svg" class="dark-mode-cta"/>
+            </div>
+            <div class="desktop-navigation is-flex">
+                <ul class="is-flex">
+                    <li> <a>Mes travaux  </a> </li>
+                    <li> <span> | </span> </li>
+                    <li> <a href="#">Mon parcours </a> </li>
+                    <li> <span> | </span> </li>
+                    <li> <a href="#">Me contacter </a> </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="hero" class="section hero no-selection is-flex">
+        <div class="wave-container">
+            <span class="wave"></span>
+            <span class="wave"></span>
+            <span class="wave"></span>
+            <span class="wave"></span>
+        </div>
+
+        <div class="wave-text">
+            <img src="/src/assets/icon.png" alt="Mon icone" class="rotating-icon"/>
+            <h2>Un Développeur Web</h2>
+            <p>& étudiant en <span class="is-underline">alternance</span> </p>
+        </div>    
+    </section>
+
+    <section id="work" class="section work no-selection is-flex">
+        <h1 class="work-text first-item">PORTFOLIOPORTFOLIOPORTFOLIOPORTFOLIOPORTFOLIOPORTFOLIO</h1>
+        <div class="carousel-slider first-item">
+            <img src="/src/assets/projet_1.jfif" alt="projet 1">
+            <img src="/src/assets/projet_2.jfif" alt="projet 1">
+            <img src="/src/assets/projet_3.jfif" alt="projet 1">
+            <img src="/src/assets/projet_4.jfif" alt="projet 1">
+            <img src="/src/assets/projet_5.jfif" alt="projet 1">
+        </div>
+        <div class="carousel-slider second-item">
+            <img src="/src/assets/projet_6.jfif" alt="projet 1">
+            <img src="/src/assets/projet_7.jfif" alt="projet 1">
+            <img src="/src/assets/projet_8.jfif" alt="projet 1">
+            <img src="/src/assets/projet_9.jfif" alt="projet 1">
+            <img src="/src/assets/projet_10.jfif" alt="projet 1">
+        </div>
+        <h1 class="work-text second-item">PROJETSPROJETSPROJETSPROJETSPROJETSPROJETSPROJETS</h1>
+        
+        <div class="livetest-grid">
+            <div class="card item-a is-flex">
+                <div class="card-description is-flex">
+                    <a class="project-name" href="#">OSCare</a>
+                    <span class="project-description">Webapp mobile, Yuka-like</span>
+                    <ul class="project-tags">
+                        
+                        <li><a href="#">#webapp</a></li>
+                        <li><a href="#">#responsive</a></li>
+                        <li><a href="#">#mobile</a></li>
+                        <li><a href="#">#VueJS</a></li>
+                        <li><a href="#">#Stylus</a></li>
+                        <li><a href="#">#npm</a></li>
+                        <li><a href="#">#Vuex</a></li>
+                        <li><a href="#">#QuaggaJS</a></li>
+
+                    </ul>
+                    <a href="#" class="learn-more-cta">En apprendre plus</a>
+                </div>
+                
+                <div class="learn-more">       
+                    <img class="example" src="/src/assets/projet_6.jfif" alt="placeholder gif">         
+                    
+                </div>
+            </div>
+            
+            <div class="card item-b is-flex">
+                <h3 class="project-name">Lorem</h3>
+            </div>
+            
+            <div class="card item-c is-flex">
+                <h3 class="project-name">Ipsum</h3>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section is-flex">
+        <h2>Contact section - Work in progress</h2>
+    </section>
+
+    <div id="cursor" class="cursor-container">
+        <div class="cursor-dot"></div>
+        <div class="cursor-circle"></div>
+    </div>
+
+</body>
+
+<!-- GSAP -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollToPlugin.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
+
+<script src="./src/js/mouse.js"></script>
+<script src="./src/js/dark-mode.js"></script>
+<script src="./src/js/random.js"></script>
+<script src="./src/js/scroll.js"></script>
+
+</html>
