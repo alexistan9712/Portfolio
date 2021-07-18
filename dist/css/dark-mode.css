@@ -46,7 +46,7 @@
   animation: waves 47s linear infinite;
   background: rgba(51, 51, 51, calc(4/4));
 }
-#hero.dark-mode-section .wave-text h2, #hero.dark-mode-section .wave-text p {
+#hero.dark-mode-section .wave-text h2, #hero.dark-mode-section .wave-text h2::before, #hero.dark-mode-section .wave-text p, #hero.dark-mode-section .wave-text span {
   color: #f2f2f2;
 }
 

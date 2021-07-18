@@ -22,7 +22,7 @@
 body {
 
     width: 100vw;
-    background: c.$bleu;
+    background: c.$blanc;
     font-family: f.$primary;
     overflow-x: hidden;
 
@@ -49,11 +49,12 @@ body {
     }
     
     .is-underline {
-        color: c.$vert;
+        color: c.$noir;
+        line-height: 1.5;
         display: inline-block;
         background-image: url('/src/assets/underline-vert-transparent.gif');
-        background-position: 0 115%;
-        background-size: 100% .65em;
+        background-position: 0 120%;
+        background-size: 100% .7em;
         background-repeat: repeat-x;
         
         &:nth-child(2n) {
@@ -112,7 +113,7 @@ body {
         position: relative;
         width: 100vw;
         height: 100vh;
-        background: c.$bleu;
+        background: c.$jaune;
         overflow-x: hidden;
         &:nth-child(2n-1) {
             color: pink;
@@ -143,3 +144,4 @@ body {
     80%  { transform: translateY(-40px) rotate(30deg); }
     100% { transform: translateY(40px)  rotate(0); }
 }
+

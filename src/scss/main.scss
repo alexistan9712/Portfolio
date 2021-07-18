@@ -22,11 +22,11 @@ section.hero {
         justify-content: center;
         align-items: center;
 
+        
         .wave {
             position: absolute; 
             top: -90%;
             left: 50%;
-            
             transform: translate(-50%, -50%);
     
             width: 350vh;
@@ -47,32 +47,95 @@ section.hero {
     .wave-text {
         position: relative;
         top: -100px;
-        margin: 0 auto;
 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        margin: 0 150px;
+        @media screen and (max-width: 768px) {
+            flex-direction: column;
+        }
         
-        img {
-            position: relative;
-            width: 100px;
-            left: 25px;
-            animation: rotate-bounce 10s infinite;
+        .left-section {
             @media screen and (max-width: 768px) {
-                width: 50px;
-                top: -15px;
+                margin-top: 200px;
+            }
+            
+            h2 {
+                font-size: clamp(2rem, 5vw, 3.5rem);
+                font-weight: bold; 
+                color: c.$noir;
+                font-family: f.$title;
+    
+                &::before {
+                    content:'Bonjour ! 👋';
+                    display: block;
+                    margin: 0;
+                    font-size: clamp(1rem, 5vw, 1.5rem);
+                    font-weight: 700;
+                    color: c.$noir;
+                    font-family: f.$title;
+                }
+            }
+            
+            p { 
+                font-size: clamp(1rem, 2.5vw, 1.5rem);
+                color: c.$noir;
+                font-family: f.$paragraph;
+            } 
+
+            a {
+                background: c.$vert;
+                margin: 25px 0;
+                color: #fff;
+                padding: 20px;
+                display: block;
+                width: 250px;
+                text-decoration: none;
+                text-align: center;
+                border-radius: 5px;
             }
         }
 
-        h2 {
-            margin: 25px;
-            font-size: clamp(1.5rem, 5vw, 4rem);
-            font-weight: 700; 
-            color: c.$noir;
+        .right-section {
+
+            margin-left: 100px;
+            font-family: f.$title;
+            background: c.$vert;
+            border-radius: 100%;
+
+            &.bubble {
+                width: 200px;
+                height: 200px;
+                @media screen and (min-width: 768px) and (max-width: 1200px) {
+                    width: 300px;
+                    height: 200px;
+                }
+                @media screen and (max-width: 768px){
+                    margin: 15px;
+                    width: 125px;
+                    height: 125px;
+                }
+            }
+
+            img {
+                width: 125px;
+                position: relative;
+                top: -25px;
+                animation: rotate-bounce 10s infinite;
+                @media screen and (max-width: 768px) {
+                    width: 75px;
+                }
+                
+            }
+    
+            
+            
         }
+
         
-        p { 
-            margin: -25px 25px;
-            font-size: clamp(1.25rem, 2.5vw, 3rem);
-            color: c.$noir;
-        } 
+        
     }
 
 

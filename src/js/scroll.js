@@ -18,13 +18,13 @@ gsap.to(".work-text.first-item", {
 
 gsap.to(".carousel-slider.first-item", {
     scrollTrigger: {
-        trigger: ".carousel-slider.first-item",
+        trigger: ".carousel-slider.second-item",
         start: "top bottom",
         toggleActions: "restart pause reverse pause",
-        scrub: 1,
+        scrub: 2,
+        markers: true,
     },
-    x: -2500,
-    duration: 1
+    x: -2000
 })
 
 gsap.to(".carousel-slider.second-item", {
@@ -33,7 +33,7 @@ gsap.to(".carousel-slider.second-item", {
         start: "top bottom",
         end: "bottom",
         toggleActions: "restart pause reverse pause",
-        scrub: 1,
+        scrub: 2,
     },
     x: 2000,
     duration: 1
@@ -46,7 +46,7 @@ gsap.to(".work-text.second-item", {
         toggleActions: "reverse reverse reverse reverse",
         scrub: 1,
     },
-    x: -2500,
+    x: -2000,
     ease: "none",
     duration: 3
 })
@@ -58,14 +58,25 @@ gsap.to(".livetest-grid .card-description", {
     scrollTrigger: {
         trigger: ".livetest-grid .card-description",
         start: "top bottom",
+<<<<<<< HEAD
         end: "top center",
         toggleActions: "reverse reverse reverse reverse",
         scrub: 1,
         markers: true,
+=======
+        end: "top bottom",
+        toggleActions: "reverse reverse reverse reverse",
+        scrub: 1,
+>>>>>>> master
     },
     y: 200,
     borderTopLeftRadius: 0,
     borderTopRightRadius: 0,
+<<<<<<< HEAD
+=======
+    borderBottomLeftRadius: 0,
+    borderBottomRightRadius: 0,
+>>>>>>> master
     ease: "none",
     duration: 2
 });

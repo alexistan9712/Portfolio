@@ -2,6 +2,10 @@
 /* IMPORTS
 ======================= */
 @import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Poppins:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Serif&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Zen+Loop&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&family=Zen+Loop&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pangolin&family=Staatliches&display=swap");
 .cursor-container {
   width: 0;
   height: 0;
@@ -110,7 +114,7 @@ nav.navigation:hover ~ .cursor-container .cursor-circle {
   animation: waves 47s linear infinite;
   background: rgba(51, 51, 51, calc(4/4));
 }
-#hero.dark-mode-section .wave-text h2, #hero.dark-mode-section .wave-text p {
+#hero.dark-mode-section .wave-text h2, #hero.dark-mode-section .wave-text h2::before, #hero.dark-mode-section .wave-text p, #hero.dark-mode-section .wave-text span {
   color: #f2f2f2;
 }
 
@@ -156,6 +160,7 @@ nav {
   width: 100%;
   height: 80px;
   z-index: 1000;
+  background: #f2f2f2;
 }
 @media screen and (min-width: 768px) {
   nav .mobile-menu {
@@ -288,7 +293,7 @@ nav .dark-mode-cta {
 
 body {
   width: 100vw;
-  background: #82ccdd;
+  background: #f2f2f2;
   font-family: "Poppins", sans-serif;
   overflow-x: hidden;
 }
@@ -312,11 +317,12 @@ body .center-transform {
   transform: translate(-50%, -50%);
 }
 body .is-underline {
-  color: #00b894;
+  color: #333;
+  line-height: 1.5;
   display: inline-block;
   background-image: url("/src/assets/underline-vert-transparent.gif");
-  background-position: 0 115%;
-  background-size: 100% 0.65em;
+  background-position: 0 120%;
+  background-size: 100% 0.7em;
   background-repeat: repeat-x;
 }
 body .is-underline:nth-child(2n) {
@@ -370,7 +376,7 @@ body .section {
   position: relative;
   width: 100vw;
   height: 100vh;
-  background: #82ccdd;
+  background: #fdcb6e;
   overflow-x: hidden;
 }
 body .section:nth-child(2n-1) {
@@ -458,30 +464,85 @@ section.hero .wave-container .wave:nth-child(4) {
 section.hero .wave-text {
   position: relative;
   top: -100px;
-  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 150px;
 }
-section.hero .wave-text img {
+@media screen and (max-width: 768px) {
+  section.hero .wave-text {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 768px) {
+  section.hero .wave-text .left-section {
+    margin-top: 200px;
+  }
+}
+section.hero .wave-text .left-section h2 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: bold;
+  color: #333;
+  font-family: "Staatliches", serif;
+}
+section.hero .wave-text .left-section h2::before {
+  content: "Bonjour ! 👋";
+  display: block;
+  margin: 0;
+  font-size: clamp(1rem, 5vw, 1.5rem);
+  font-weight: 700;
+  color: #333;
+  font-family: "Staatliches", serif;
+}
+section.hero .wave-text .left-section p {
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  color: #333;
+  font-family: "Quicksand", serif;
+}
+section.hero .wave-text .left-section a {
+  background: #00b894;
+  margin: 25px 0;
+  color: #fff;
+  padding: 20px;
+  display: block;
+  width: 250px;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 5px;
+}
+section.hero .wave-text .right-section {
+  margin-left: 100px;
+  font-family: "Staatliches", serif;
+  background: #00b894;
+  border-radius: 100%;
+}
+section.hero .wave-text .right-section.bubble {
+  width: 200px;
+  height: 200px;
+}
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  section.hero .wave-text .right-section.bubble {
+    width: 300px;
+    height: 200px;
+  }
+}
+@media screen and (max-width: 768px) {
+  section.hero .wave-text .right-section.bubble {
+    margin: 15px;
+    width: 125px;
+    height: 125px;
+  }
+}
+section.hero .wave-text .right-section img {
+  width: 125px;
   position: relative;
-  width: 100px;
-  left: 25px;
+  top: -25px;
   animation: rotate-bounce 10s infinite;
 }
 @media screen and (max-width: 768px) {
-  section.hero .wave-text img {
-    width: 50px;
-    top: -15px;
+  section.hero .wave-text .right-section img {
+    width: 75px;
   }
-}
-section.hero .wave-text h2 {
-  margin: 25px;
-  font-size: clamp(1.5rem, 5vw, 4rem);
-  font-weight: 700;
-  color: #333;
-}
-section.hero .wave-text p {
-  margin: -25px 25px;
-  font-size: clamp(1.25rem, 2.5vw, 3rem);
-  color: #333;
 }
 
 section.work {

@@ -1,20 +1,16 @@
 console.log("dark-mode.js ready ! 👍")
 const toggleDarkMode = document.querySelectorAll('.dark-mode-cta');
 
+// Permet de changer l'état du Dark Mode
 function toggleClass(i) {
-    // Log 
-    console.log("Dark Mode applied");
-
     // Toggle Dark mode class
     toggleDarkMode[i].classList.toggle('enable-dark-mode')
 
     // Toggle Dark mode icon
-    if(toggleDarkMode[i].classList.contains('enable-dark-mode')) 
-        toggleDarkMode[i].src = 'src/assets/sunny.svg';
-    else  
-        toggleDarkMode[i].src = 'src/assets/moon.svg';
+    return (toggleDarkMode[i].classList.contains('enable-dark-mode')) ? toggleDarkMode[i].src = 'src/assets/sunny.svg' : toggleDarkMode[i].src = 'src/assets/moon.svg';
 }
 
+// Selectionne tous le contenu a modifier
 for(let i = 0; i < toggleDarkMode.length; i++) {
     toggleDarkMode[i].addEventListener('click', e => {
         toggleClass(i);

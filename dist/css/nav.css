@@ -1,6 +1,10 @@
 /* IMPORTS
 ======================= */
 @import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Poppins:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Serif&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Zen+Loop&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&family=Zen+Loop&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pangolin&family=Staatliches&display=swap");
 /* COLORS VARIABLES  
 ======================= */
 /* FONT-FAMILY
@@ -15,6 +19,7 @@ nav {
   width: 100%;
   height: 80px;
   z-index: 1000;
+  background: #f2f2f2;
 }
 @media screen and (min-width: 768px) {
   nav .mobile-menu {
